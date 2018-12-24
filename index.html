@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flows</title>
+</head>
+<body>
+<div class="snow-container">
+    <div class="snow foreground"></div>
+    <div class="snow foreground layered"></div>
+    <div class="snow middleground"></div>
+    <div class="snow middleground layered"></div>
+    <div class="snow background"></div>
+    <div class="snow background layered"></div>
+    <div class="tree">
+        <img  style="width: 100%;height: 100%" src="statics/png/tree.png">
+    </div>
+    <div class="smile">
+        <img  style="width: 100%;height: 100%" src="statics/gif/xiao.gif">
+    </div>
+    <div class="chi">
+        <img  style="width: 100%;height: 100%" src="statics/gif/lengtu.gif">
+    </div>
+    <div class="word">
+        <div class="word_1">M</div>
+        <div class="word_1 split_2">e</div>
+        <div class="word_1 split_3">r</div>
+        <div class="word_1 split_4">r</div>
+        <div class="word_1 split_14">y</div>
+
+        <div class="word_1 split_5">C</div>
+        <div class="word_1 split_6">h</div>
+        <div class="word_1 split_7">r</div>
+        <div class="word_1 split_8">i</div>
+        <div class="word_1 split_9">s</div>
+        <div class="word_1 split_10">t</div>
+        <div class="word_1 split_11">m</div>
+        <div class="word_1 split_12">a</div>
+        <div class="word_1 split_13">s</div>
+    </div>
+</div>
+
+</body>
+<style>
+    .split_2{
+        animation-delay: 0.2s !important;
+        animation-fill-mode: forwards !important;
+        transform: translateY(-300px);
+    }
+
+    .split_3{
+        animation-delay: 0.4s !important;
+        animation-fill-mode: forwards !important;
+        transform: translateY(-300px);
+    }
+    .split_4{
+        animation-delay: 0.6s !important;
+        animation-fill-mode: forwards !important;
+        transform: translateY(-300px);
+    }
+    .split_14{
+        animation-delay: 0.8s !important;
+        animation-fill-mode: forwards !important;
+        transform: translateY(-300px);
+    }
+    .split_5{
+        margin-left: 40px !important;
+        animation-delay: 1s !important;
+        animation-fill-mode: forwards !important;
+        transform: translateY(-300px);
+    }
+    .split_6{
+        animation-delay: 1.2s !important;
+        animation-fill-mode: forwards !important;
+        transform: translateY(-300px);
+    }
+    .split_7{
+        animation-delay: 1.4s !important;
+        animation-fill-mode: forwards !important;
+        transform: translateY(-300px);
+    }
+    .split_8{
+        animation-delay: 1.6s !important;
+        animation-fill-mode: forwards !important;
+        transform: translateY(-300px);
+    }
+    .split_9{
+        animation-delay: 1.8s !important;
+        animation-fill-mode: forwards !important;
+        transform: translateY(-300px);
+    }
+    .split_10{
+        animation-delay: 2s !important;
+        animation-fill-mode: forwards !important;
+        transform: translateY(-300px);
+    }
+    .split_11{
+        animation-delay: 2.2s !important;
+        animation-fill-mode: forwards !important;
+        transform: translateY(-300px);
+    }
+    .split_12{
+        animation-delay: 2.4s !important;
+        animation-fill-mode: forwards !important;
+        transform: translateY(-300px);
+    }
+    .split_13{
+        animation-delay: 2.6s !important;
+        animation-fill-mode: forwards !important;
+        transform: translateY(-300px);
+    }
+
+
+
+    .word_1{
+        margin-left: 10px;
+        display: inline-block;
+        animation: word1 1s cubic-bezier(0.5,1,0.5,1.2);
+    }
+
+    @keyframes word1 {
+        0%{
+            transform: translateY(-300px);
+
+        }
+        100%{
+            transform:  translateY(0px);
+        }
+    }
+
+    @font-face {
+        font-family: 'nianxi';
+        src:url('statics/font/nianxi.ttf');
+        font-weight: normal;
+        font-style: normal;
+    }
+    .word{
+        font-family: 'nianxi';
+        font-weight: bold;
+        color: whitesmoke;
+        font-size: 3.5em;
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        display: flex;
+
+    }
+
+     .chi{
+         width: 10%;
+         position: absolute;
+         bottom: 20px;
+         right: 45%;
+         animation: chiAnima 2.5s cubic-bezier(0.5,1,0.5,1.2);
+     }
+
+     @keyframes chiAnima {
+         0%{
+             right: 0%;
+
+         }
+         100%{
+             right: 45%;
+         }
+     }
+    .smile{
+        width: 10%;
+        position: absolute;
+        bottom: 20px;
+        right: 55%;
+        animation: smileAnima 2.5s ease-in-out infinite alternate-reverse;
+        transform-origin: 50% 150%;
+    }
+
+     @keyframes smileAnima {
+         0%{
+             transform: rotate(5deg);
+
+         }
+         100%{
+             transform: rotate(-5deg);
+         }
+     }
+    .tree{
+        width: 40%;
+        position: fixed;
+        bottom: -10px;
+        left: 50%;
+        animation: treeAnima linear 5s infinite alternate-reverse;
+        filter: brightness(110%);
+    }
+
+    @keyframes treeAnima {
+        0%{
+            filter: hue-rotate(0deg)  contrast(90%);
+
+        }
+        100%{
+            filter: hue-rotate(360deg) contrast(110%);
+        }
+    }
+
+    .snow-container {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        z-index: 2;
+        pointer-events: none;
+        background-color: plum;
+    }
+
+    .snow {
+        display: block;
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        pointer-events: none;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+        -webkit-animation: snow linear infinite;
+        animation: snow linear infinite;
+    }
+    .snow.foreground {
+        background-image: url("statics/png/snow_1.png");
+        -webkit-animation-duration: 15s;
+        animation-duration: 15s;
+    }
+    .snow.foreground.layered {
+        -webkit-animation-delay: 7.5s;
+        animation-delay: 7.5s;
+    }
+    .snow.middleground {
+        background-image: url("../../statics/png/snow_2.png");
+        -webkit-animation-duration: 20s;
+        animation-duration: 20s;
+    }
+    .snow.middleground.layered {
+        -webkit-animation-delay: 10s;
+        animation-delay: 10s;
+    }
+    .snow.background {
+        background-image: url("statics/png/snow_3.png");
+        -webkit-animation-duration: 30s;
+        animation-duration: 30s;
+    }
+    .snow.background.layered {
+        -webkit-animation-delay: 15s;
+        animation-delay: 15s;
+    }
+
+    @-webkit-keyframes snow {
+        0% {
+            -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+        }
+        100% {
+            -webkit-transform: translate3d(15%, 100%, 0);
+            transform: translate3d(15%, 100%, 0);
+        }
+    }
+
+    @keyframes snow {
+        0% {
+            -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+        }
+        100% {
+            -webkit-transform: translate3d(15%, 100%, 0);
+            transform: translate3d(15%, 100%, 0);
+        }
+    }
+</style>
+</html>
